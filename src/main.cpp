@@ -11,10 +11,10 @@ Img ReadImage(std::ifstream& file);
 void ObscureImage(Img& img, double prob) noexcept;
 
 int main() {
-    auto img = ReadImageFile("../img.txt");
-    auto symbol1 = ReadSymbolFile("../L.txt");
-    auto symbol2 = ReadSymbolFile("../A.txt");
-    auto symbol3 = ReadSymbolFile("../_.txt");
+    auto img = ReadImageFile("../images/img.txt");
+    auto symbol1 = ReadSymbolFile("../images/L.txt");
+    auto symbol2 = ReadSymbolFile("../images/A.txt");
+    auto symbol3 = ReadSymbolFile("../images/_.txt");
     ObscureImage(img, 0.3);
     
     std::vector<Symbol> symbols = {symbol1, symbol2, symbol3};
