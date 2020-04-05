@@ -34,10 +34,8 @@ ImgContainer<RO>::ImgContainer(const ImgContainer<RO>& rhs) noexcept
 
 template <typename RO>
 ImgContainer<RO>::~ImgContainer() {
-    if constexpr (!std::is_same_v<RO, ResourceOwner>)
-        return;
-            
-    delete [] _data;
+    if constexpr (std::is_same_v<RO, ResourceOwner>)
+        delete [] _data;;
 }
 
 template <typename RO>
