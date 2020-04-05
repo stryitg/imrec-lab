@@ -40,8 +40,6 @@ ImgContainer<RO>::~ImgContainer() {
     delete [] _data;
 }
 
-#include <iostream>
-
 template <typename RO>
 const uint8_t& ImgContainer<RO>::operator()(size_t row, size_t col) const noexcept {
     ASSERT(row < _hight);
