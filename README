@@ -1,0 +1,4 @@
+To generate image use
+./make_image.sh ALAL__AL___
+This will concat files A.txt L.txt and _.txt in a given order and write the result to img.txt
+./bin/lab1 will output ALAL__AL___  for img.txt in most cases
